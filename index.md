@@ -1,6 +1,6 @@
 ---
 layout: base
-title: I'm Niharika Boyanapalli
+title: I'm [Niharika Boyanapalli]
 hide: true
 ---
 
