@@ -1,10 +1,10 @@
 ---
 layout: base
-title: I'm [Niharika Boyanapalli]
+title: I'm Niharika Boyanapalli
 hide: true
 ---
 
-Hi! My name is [Your Full Name]
+Hi! My name is Niharika Boyanapalli
 
 ### Development Environment
 
