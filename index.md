@@ -8,12 +8,21 @@ hide: true
 
 Hi! My name is [Niharika Boyanapalli]. 🤨
 
+<<<<<<< HEAD
+| Role         | Name     | Repo Location                          | Stream                | Repo Name |
+|--------------|----------|----------------------------------------|-----------------------|-----------|
+| Scrum Master | John     | github.com/jm1021/student              | upstream (OCS fork)   | student   |
+| Scrummer     | Niharika | github.com/Niharika-Boyanapalli/student| downstream (fork)     | student   |
+| Scrummer     | Adya     | github.com/AdyaShipekar/student        | downstream (fork)     | student   |
+| Scrummer     | Salma    | github.com/Salma-Zag/student           | downstream (fork)     | student   |
+=======
 | Role         | Name     | Repo Location                       | Stream                | Repo Name |
 |--------------|----------|-------------------------------------|-----------------------|-----------|
 | Scrum Master | John     | github.com/jm1021/student           | upstream (OCS fork)   | student   |
 | Scrummer     | Adya    |github.com/AdyaShipekar/student            | downstream (fork)     | student   |
 | Scrummer     | Salma | github.com/Salma-Zag/student         | downstream (fork)     | student   |
 | Scrummer     | Niharika    | github.com/Niharika-Boyanapalli/student           | downstream (fork)     | student   |
+>>>>>>> e539b4e292ce0108c50af3345c2c1b166ee78f9a
 
 ### Development Environment
 

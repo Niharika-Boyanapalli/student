@@ -60,12 +60,12 @@ Flags are made using Wikipedia images
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
-        {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "b/b9/Flag_of_Oregon.svg", "greeting": "Hi", "description": "Oregon - 9 years"},
-        {"flag": "b/be/Flag_of_England.svg", "greeting": "Alright mate", "description": "England - 2 years"},
-        {"flag": "e/ef/Flag_of_Hawaii.svg", "greeting": "Aloha", "description": "Hawaii - 2 years"},
-    ];
-
+       
+    {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
+    {"flag": "8/88/Flag_of_Australia.svg", "greeting": "G’day", "description": "Australia - 1 year"},
+    {"flag": "4/41/Flag_of_India.svg", "greeting": "Namaste", "description": "India - 3 years"},
+    {"flag": "3/3e/Flag_of_New_Zealand.svg", "greeting": "Kia ora", "description": "New Zealand - 6 months"}
+]
     // 3a. Consider how to update style count for size of container
     // The grid-template-columns has been defined as dynamic with auto-fill and minmax
 
@@ -101,10 +101,14 @@ Flags are made using Wikipedia images
 
 Here is what I did at those places
 
+<<<<<<< HEAD
+- 
+=======
 - 🏫 Lots of Elementary Schools in Del Sur, San Diego, (CA)
 - 🏫 Middle and High School in Del Sur (CA)
 - 🎓 I love math and computer science!!!
 - ⛪ I have New Zealend and Australian Citizenship and can live there
+>>>>>>> e539b4e292ce0108c50af3345c2c1b166ee78f9a
 
 ### Culture, Family, and Fun
 
