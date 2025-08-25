@@ -56,7 +56,7 @@ Hi! My name is [Niharika Boyanapalli]. 🤨
         </div>
     </a>
     <a href="{{site.baseurl}}/turtle" style="text-decoration: none;">
-        <div style="background-color: #e01919ff; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+        <div style="background-color: #e019ccff; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
             Turtle
         </div>
     </a>
