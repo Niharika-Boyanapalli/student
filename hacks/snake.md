@@ -1,6 +1,6 @@
 ---
 layout: base
-title: SnakeGame.io
+title: Snake Game
 permalink: /snake/
 ---
 
