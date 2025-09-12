@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Snake Game
+title: Snake Game Improvisation
 permalink: /snake/
 ---
 
@@ -17,7 +17,7 @@ permalink: /snake/
         display: none;
         border-style: solid;
         border-width: 10px;
-        border-color: #470c0cff;
+        border-color: #421dcaff;
     }
     canvas:focus{
         outline: none;
@@ -329,7 +329,7 @@ permalink: /snake/
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
         let activeDot = function(x, y){
-            ctx.fillStyle = "#FFFFFF";
+            ctx.fillStyle = "#d10f0fff";
             ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
         }
         /* Random food placement */
