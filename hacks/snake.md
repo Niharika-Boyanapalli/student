@@ -17,7 +17,7 @@ permalink: /snake/
         display: none;
         border-style: solid;
         border-width: 10px;
-        border-color: #FFFFFF;
+        border-color: #470c0cff;
     }
     canvas:focus{
         outline: none;
@@ -364,7 +364,7 @@ permalink: /snake/
         /////////////////////////////////////////////////////////////
         let setWall = function(wall_value){
             wall = wall_value;
-            if(wall === 0){screen_snake.style.borderColor = "#606060";}
+            if(wall === 0){screen_snake.style.borderColor = "#b31212ff";}
             if(wall === 1){screen_snake.style.borderColor = "#FFFFFF";}
         }
     })();
