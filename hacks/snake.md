@@ -1,7 +1,7 @@
 ---
 layout: base
-title: Snake Game Improvisation
-permalink: /snake/
+title: Snake Game
+permalink: /snake
 ---
 
 <style>
@@ -17,7 +17,7 @@ permalink: /snake/
         display: none;
         border-style: solid;
         border-width: 10px;
-        border-color: #421dcaff;
+        border-color: #FFFFFF;
     }
     canvas:focus{
         outline: none;
@@ -66,12 +66,49 @@ permalink: /snake/
         background-color: #FFF;
         color: #000;
     }
+
+    #scoreboard {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid #057e38ff;
+        border-radius: 8px; 
+        background-color: rgba(0, 0, 0, 0.05);
+        color: #057e38ff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: 'Orbitron', sans-serif;
+        margin-bottom: 10px;
+        box-shadow: 0 0 10px rgba(0,255,204,0.3);
+            transition: all 0.3s ease;
+            text-align: center;
+    }
+
+    #scoreboard:hover {
+        background-color: rgba(0,255,204,0.15)
+    }
+
+    #score_value {
+        margin-left: 8px;
+        color: #ffffff; 
+    }
+
+    @keyframes bounce {
+        0% {transform: scale(1);}
+        50% {transform: scale(1.4);}
+        100% {transform: scale(1);}
+    }
+
+    .score-bounce {
+        animation: bounce 0.3s ease;
+    }
 </style>
 
 <h2>Snake</h2>
 <div class="container">
-    <p class="fs-4">Score: <span id="score_value">0</span></p>
-
+    <div id="scoreboard">
+        <span id="score_label">Score:</span>
+        <span id="score_value">0</span>
+    </div>
     <div class="container bg-secondary" style="text-align:center;">
         <!-- Main Menu -->
         <div id="menu" class="py-4 text-light">
@@ -99,6 +136,7 @@ permalink: /snake/
                 <label for="speed2">Normal</label>
                 <input id="speed3" type="radio" name="speed" value="35"/>
                 <label for="speed3">Fast</label>
+                <!--ADDED SPEED 4 (IMPOSSIBLE)-->
                 <input id="speed4" type="radio" name="speed" value="20"/>
                 <label for="speed4">Impossible</label>
             </p>
@@ -269,7 +307,8 @@ permalink: /snake/
             }
             // Repaint canvas
             ctx.beginPath();
-            ctx.fillStyle = "royalblue";
+            //CHANGE HEX TO CHANGE BACKGROUND COLOR
+            ctx.fillStyle = "green";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             // Paint snake
             for(let i = 0; i < snake.length; i++){
@@ -307,8 +346,13 @@ permalink: /snake/
         /////////////////////////////////////////////////////////////
         let changeDir = function(key){
             // test key and switch direction
+            // CHANGED CODE TO USE WASD SO AS NOT TO MOVE THE ENTIRE PAGE WHILE PLAYING
             switch(key) {
                 case 37:    // left arrow
+                    if (snake_dir !== 1)    // not right
+                        snake_next_dir = 3; // then switch left
+                    break;
+                case 65:    // 'A'
                     if (snake_dir !== 1)    // not right
                         snake_next_dir = 3; // then switch left
                     break;
@@ -316,11 +360,23 @@ permalink: /snake/
                     if (snake_dir !== 2)    // not down
                         snake_next_dir = 0; // then switch up
                     break;
+                case 87:    // 'W'
+                    if (snake_dir !== 2)    // not down
+                        snake_next_dir = 0; // then switch up
+                    break;
                 case 39:    // right arrow
                     if (snake_dir !== 3)    // not left
                         snake_next_dir = 1; // then switch right
                     break;
+                case 68:    // 'D'
+                    if (snake_dir !== 3)    // not left
+                        snake_next_dir = 1; // then switch right
+                    break;
                 case 40:    // down arrow
+                    if (snake_dir !== 0)    // not up
+                        snake_next_dir = 2; // then switch down
+                    break;
+                case 83:    // 'S'
                     if (snake_dir !== 0)    // not up
                         snake_next_dir = 2; // then switch down
                     break;
@@ -329,9 +385,15 @@ permalink: /snake/
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
         let activeDot = function(x, y){
-            ctx.fillStyle = "#d10f0fff";
-            ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
+          // IF THIS DOT IS FOOD, CHANGE APPLE COLOR TO GREEN
+        if (x === food.x && y === food.y) {
+            ctx.fillStyle = "#FF0000"; // Red color for apple
+        } else {
+            ctx.fillStyle = "#FFFFFF"; // White color for snake
         }
+    ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
+}
+        
         /* Random food placement */
         /////////////////////////////////////////////////////////////
         let addFood = function(){
@@ -352,6 +414,15 @@ permalink: /snake/
         /////////////////////////////////////////////////////////////
         let altScore = function(score_val){
             ele_score.innerHTML = String(score_val);
+
+            //Reset animation
+            ele_score.classList.remove("score-bounce");
+
+            //Trigger reflow to restart the animation
+            void ele_score.offsetWidth;
+
+            //Add bounce class again
+            ele_score.classList.add("score-bounce");
         }
         /////////////////////////////////////////////////////////////
         // Change the snake speed...
@@ -362,9 +433,10 @@ permalink: /snake/
             snake_speed = speed_value;
         }
         /////////////////////////////////////////////////////////////
+        // CAN CHANGE BORDER COLOR
         let setWall = function(wall_value){
             wall = wall_value;
-            if(wall === 0){screen_snake.style.borderColor = "#b31212ff";}
+            if(wall === 0){screen_snake.style.borderColor = "#606060";}
             if(wall === 1){screen_snake.style.borderColor = "#FFFFFF";}
         }
     })();
