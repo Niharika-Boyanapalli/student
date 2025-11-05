@@ -1,7 +1,7 @@
 title: Open Coding 
 description: "Class of 2026"
-owner_name: John Mortensen
-github_username: jm1021 
+owner_name: Niharika Boyanapalli
+github_username: Niharika 
 github_repo: "student" 
 baseurl: "/student" 
 future: true
@@ -18,5 +18,5 @@ plugins:
 header_pages:
   - navigation/blog.md
   - navigation/search.md
-  - navigation/about.md
+  - navigation/.md
   - navigation/logintoolkit.md
