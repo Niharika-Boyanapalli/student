@@ -1,15 +1,15 @@
-# Blog — Niharika Boyanapalli  
-Date: 2025-11-04
-
-## Overview
-This post summarizes what I learned over recent sprints, compares my current skills to the start of the year, reviews feedback and analytics, and outlines what I want to do next. I focus on three main efforts: the Tool Sprint, the Teaching Fundamentals of JS Sprint, and the Gamify Mansion Sprint. I also reflect on how N@TM went and highlight a few actionable next steps.
-
-## Where I am vs. the beginning of the year
-At the start of the year I was very uncomfortable with basic programming concepts and small projects and less confident in planning multi-week sprints, and collaborating. Now I am better at
-- Ship end-to-end features more consistently (design → prototype → user testing → iterate).
-- Use version control and issue tracking more effectively.
-- Read and act on simple analytics to prioritize fixes and features.
-My confidence improved most in project scoping and user-focused iteration.
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=/blog/niharika-boyanapalli/">
+  <link rel="canonical" href="/blog/niharika-boyanapalli/">
+  <title>Redirecting…</title>
+</head>
+<body>
+  <p>Moved: <a href="/blog/niharika-boyanapalli/">Open blog — Niharika Boyanapalli</a></p>
+</body>
+</html>
 
 ## Tool Sprint — key takeaways and classification
 What we learned:
